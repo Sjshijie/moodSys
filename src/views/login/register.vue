@@ -6,42 +6,32 @@
                           v-bind:css="false">
             <div class='a item' v-if='isShow' key='a' :data-index='1'>
                 <van-cell-group>
-                    <van-field left-icon="contact"/>
+                    <van-field left-icon="contact" label="用户名"/>
                 </van-cell-group>
             </div>
             <div class='a item' v-if='isShow' key='b' :data-index='2'>
                 <van-cell-group>
-                    <van-field left-icon="contact" type="password"/>
+                    <van-field left-icon="contact" type="password" label="密码"/>
                 </van-cell-group>
             </div>
-            <div class='a btn' v-if='isShow' key='c' :data-index='3'>
+            <div class='a item' v-if='isShow' key='c' :data-index='3'>
+                <van-cell-group>
+                    <van-field label="验证码"/>
+                </van-cell-group>
+            </div>
+            <div class='a btn' v-if='isShow' key='d' :data-index='4'>
                 注册
             </div>
         </transition-group>
     </div>
 </template>
 <script>
+    import minix from './minix'
+
     export default {
-        data() {
-            return {
-                isShow: false
-            }
-        },
-        methods: {
-            beforeEnter: function (dom) {
-                dom.classList.add("workin-enter", "workin-enter-active");
-            },
-            enter: function (dom, done) {
-                var diff = dom.dataset.diff || 100;
-                var delay = dom.dataset.index * diff;
-                setTimeout(function () {
-                    dom.classList.remove("workin-enter");
-                }, delay);
-            },
-            afterEnter: function (dom) {
-                dom.classList.remove("workin-enter-active");
-            },
-        },
+        mixins:[minix]
+
+
 //   mounted() {
 //     let totalTime =1;
 //     let circleTime=0.5;
@@ -62,16 +52,6 @@
 //   })
 // }
 //   },
-        mounted() {
-            // var eleArr = document.querySelectorAll('.a')
-            // for (let item of eleArr){
-            //   console.log(item)
-            //   item.s
-            // }
-            setTimeout(() => {
-                this.isShow = true
-            }, 0)
-        }
     };
 </script>
 

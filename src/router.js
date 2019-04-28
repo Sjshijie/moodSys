@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from './views/login.vue'
-import Register from './views/register.vue'
-import LoginDe from './views/loginDe.vue'
+import Login from './views/login/login.vue'
+import Register from './views/login/register.vue'
+import LoginDe from './views/login/loginDe.vue'
 import Home from './views/Home.vue'
 
 Vue.use(Router)

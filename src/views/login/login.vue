@@ -28,7 +28,7 @@ export default {
 #login {
   width: 100%;
   height: 100%;
-  background-image: url("../image/image.jpeg");
+  background-image: url("../../image/image.jpeg");
   background-size: cover;
   font-size: 16px;
   box-sizing: border-box;
