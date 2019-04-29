@@ -1,18 +1,46 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <div class="avatar">
+        <img src="../image/avatar.jpg" alt="">
+        <div>{{username}}</div>
+      </div>
+      <selfswiper></selfswiper>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import selfswiper from './swiper/swiper'
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  data(){
+    return{
+      // avatarSrc:'../image/avatar.jpg'
+      username:'Sj'
+    }
+  },
+  components:{
+      selfswiper
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .home{
+    width:100%;
+    height: 100%;
+    .avatar{
+      height:20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 16px;
+      img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+  }
+</style>

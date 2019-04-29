@@ -7,11 +7,8 @@ import 'lib-flexible'
 import 'normalize.css/normalize.css'
 import './styles/index.scss'
 import 'vant/lib/index.css'
-
-
 Vue.config.productionTip = false
 Vue.use(Vant);
-
 new Vue({
   router,
   store,
