@@ -9,6 +9,12 @@ import './styles/index.scss'
 import 'vant/lib/index.css'
 Vue.config.productionTip = false
 Vue.use(Vant);
+
+window.onresize = () => {
+  alert(document.documentElement.clientHeight)
+};
+
+
 new Vue({
   router,
   store,
